@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>La Estrella del Sabor</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/portfolio/logo.png">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Serif+Text&family=Roboto:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,700&family=Sofia&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/elegant-icons-style.css" rel="stylesheet" />
+        <link href="../css/tabla.css" id="theme" rel="stylesheet">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-t text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="logo" href="../index_cliente.html">
+                  <b><img class="logo3" src="../assets/img/portfolio/logo2.png"
+                          >
+                    </b>
+                     </a><h10>La estrella del sabor</h10>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase-menu font-weight-bold bg-menu-min text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive"> 
+                        
+                    <ul class="navbar-nav ml-auto">
+                        <li  class="dropdown">
+                            <a data-toggle="dropdown" class="btn btn-outline-danger"  class="dropdown-toggle"  href="#">
+                                            <span class="profile-ava">
+                                                <img alt="" src="../assets/img/portfolio/avatar-mini4.jpg" >
+                                            </span>
+                                            <span class="username" style="color:#2A5242;">Adrian Perez&nbsp; &nbsp;<i class="far 	fas fa-caret-down"></i> </span>
+                                            <b class="caret"></b>
+                                            
+                                        </a>
+                            <ul class="dropdown-menu extended logout">
+                              <div class="log-arrow-up"></div>
+                              <li class="eborder-top">
+                                <a href="mi_perfil_admin.html"><i class="icon_profile"></i> Mi Perfil</a>
+                              </li>
+                              <li class="eborder-top">
+                                <a href="index.html"><i class="icon_house"></i> Inicio</a>
+                              </li>
+                              <li>
+                                <a href="../index.html"><i class="icon_key_alt"></i> Cerrar sesión</a>
+                              </li>
+                            </ul>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+      
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <h6>Mi perfil</h6>
+                <form name="form1" method="" action="index.html" onsubmit="return validar(this)">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" class="form-control " value="Adrian Julio" minlegth="3" maxlength="20" required pattern="[A-Za-z\sáéíóúÁÉÍÓÚ]{3,20}" title="Letras Mínimo: 3. Números: No permitidos" id="nombres">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" class="form-control" value="Perez Gonzales" minlegth="3" maxlength="20" required pattern="[A-Za-z\sáéíóúÁÉÍÓÚ]{3,20}" title="Letras Mínimo: 3. Números: No permitidos" id="apellidos">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="cedula">Cédula:</label>
+                            <input type="text" class="form-control" value="1720997220" id="cedula" minlegth="10" maxlength="10" class="input__text" required pattern="[0-9]{10}" title="Letras: No. Cantidad Números: 10">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="correo">Correo:</label>
+                            <input type="email"  class="form-control" value="adrian_p@gmial.com" id="correo"  minlegth="10" maxlength="30" required pattern="[a-zA-Z0-9_-]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="No es un correo válidos">
+                          </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="celular">Celular:</label>
+                            <input type="tel" class="form-control" value="0982869388" minlegth="7" maxlength="10" required pattern="[0-9]{7,10}" title="Letras : No. Cantidad Números Máximo: 10" id="celular">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="f_nacimiento">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control" name="fechanac" value="1992-10-11"  id="f_nacimiento" required>
+                        </div>
+                      </div><br><br>
+                      <hr class="altura">    
+                      <button class="btn btn-outline-success" type="submit">Guardar cambios</button>
+                  </form>
+                </div>
+        </section> 
+            
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                        <div class="col-lg-2 mb-5 mb-lg-0">
+                            <p class="lead2 mb-0">
+                                <img class="img-pie" href="#" src="../assets/img/portfolio/pie1.jpg">
+                            </p>
+                        </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase-menu">Contactos</h4>
+                        <p class="lead1 mb-0">
+                            Teléfonos: 
+                            0986668898 - 0982869377
+                            <br><br>
+                            Dirección:
+                            Chimborazo - Riobamba
+                            <br><br>
+                            Calles: 
+                            Isabel de godin y brasil
+                        </p>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-2 mb-5 mb-lg-0">
+                        <p class="lead2 mb-0">
+                            <img class="img-pie" href="#" src="../assets/img/portfolio/logo.png">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>ⓒ Grupo Software-2020. Todos los derechos reservados. Términos y condiciones | Políticas de privacidad</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Portfolio Modals-->
+            <!-- ventanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa inicio sesionn-->  
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="../assets/mail/jqBootstrapValidation.js"></script>
+        <script src="../assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+        <script src="../js/agregar_quitar.js"></script>
+        <script src="../js/mensajes.js"></script>
+     
+    </body>
+</html>
