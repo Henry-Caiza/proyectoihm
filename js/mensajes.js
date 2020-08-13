@@ -141,3 +141,64 @@ function eliminar8(){
 else {alert("Pedido no eliminado");
 }   
 };
+
+function buscarf(f){
+  var ok = true;
+  //var ejem=document.getElementById('txtusuario');
+  var ejem=f.elements[0].value;
+  var msg = "Debes escribir contenido en los campos:\n";
+ // alert('Ingrese un equipo'   + ejem);
+  if(f.elements[0].value != "2020-08-10"){
+    alert("Pedido no encontrado")
+    ok = false;
+  }
+  else{
+    alert("Pedido encontrado")
+    ok = true;
+  }
+  return ok;
+};
+function buscarn(f){
+  var ok = true;
+  //var ejem=document.getElementById('txtusuario');
+  var ejem=f.elements[0].value;
+  var msg = "Debes escribir contenido en los campos:\n";
+ // alert('Ingrese un equipo'   + ejem);
+  if(f.elements[0].value != "1"){
+    alert("!COMPROBANTE NO ENCONTRADO¡")
+    ok = false;
+  }
+  else{
+    alert("COMPROBANTE ENCONTRADO")
+    ok = true;
+  }
+  return ok;
+};
+function eliminard(){
+  var boton = document.getElementById("el");
+  var text1 = document.getElementById("diree");
+  if(confirm('¿Estas seguro de que deeas eliminar la dirección?')){
+    alert('Dirección eliminada');
+    if (boton.onclick){
+      text1.style.display = "none";
+    } else {
+      text1.style.display = "block";
+    }
+  }
+else {alert("Dirección no eliminada");
+}   
+};
+function eliminarf(){
+  var boton = document.getElementById("el2");
+  var text1 = document.getElementById("facc");
+  if(confirm('¿Estas seguro de que deeas eliminar los datos de factura')){
+    alert('Datos de factura eliminada');
+    if (boton.onclick){
+      text1.style.display = "none";
+    } else {
+      text1.style.display = "block";
+    }
+  }
+else {alert("Datos de factura no eliminada");
+}   
+};

@@ -95,8 +95,7 @@
                       Nuevo plato
                   </a>
                      <br></br>
-                    <table> 
-                     
+                    <table>   
                       <tr class="head">
                       <td><font size = "2">  Id</font> </td>
                             <td><font size = "2">  Nombre del plato</font> </td>
@@ -104,7 +103,6 @@
                             <td><font size = "2">  Tipo</font> </td>	
                             <td><font size = "2">  Precio</font> </td>		
                       <td colspan="2" >Acción  </td>
-                      
                       </tr>
                       <tr id="primero" >
                         <td>1</td>
@@ -115,7 +113,7 @@
                           • Cazuela de choclo, cebolla y ricotta con huevo frito</td>
                         <td>Desayuno</td>
                         <td>10.20</td>
-                        <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                        <td><a  class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-edip" role="tab" aria-controls="edip">Editar</a>
                     <a id="eli1" class="btn btn-outline-cancelar2" href="#" onclick=" return eliminar1()" >Eliminar</a></td>
                       </tr>
                       <tr id="segundo">
@@ -127,7 +125,7 @@
                           • Ensalada de frutas</td>
                         <td>Desayuno</td>
                         <td>6.60</td>
-                        <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                        <td><a  class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-edip" role="tab" aria-controls="edip">Editar</a>
                     <a id="eli2" href="#" class="btn btn-outline-cancelar2" onclick=" return eliminar2()">Eliminar</a></td>
                       </tr>
                     </table>
@@ -158,7 +156,7 @@
                         <td>1727667220</td>
                         <td>Av. 24 de Mayo y Santa Lucia</td>
                         <td>20.40</td>
-                        <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                        <td><a   class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-ediped" role="tab" aria-controls="ediped">Editar</a>
                           <a id="eli3" href="#" class="btn btn-outline-cancelar2" onclick=" return eliminar3()">Eliminar</a></td>
                       </tr>
                       <tr id="cuarto">
@@ -168,7 +166,7 @@
                         <td>1727667220</td>
                         <td>Av. 24 de Mayo y Santa Lucia</td>
                         <td>6.60</td>
-                        <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                        <td><a  class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-ediped" role="tab" aria-controls="ediped">Editar</a>
                           <a id="eli4" href="#" class="btn btn-outline-cancelar2" onclick=" return eliminar4()">Eliminar</a></td>
                       </tr>
                     </table>
@@ -203,7 +201,7 @@
                           <td>Vaca Torres</td>
                           <td>marco_v@gmial.com</td>
                           <td>0982869377</td>
-                          <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                          <td><a class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-edicli" role="tab" aria-controls="edicli">Editar</a>
                             <a id="eli5" href="#" class="btn btn-outline-cancelar2" onclick=" return eliminar5()">Eliminar</a></td>
                         </tr>
                       </table>
@@ -217,7 +215,6 @@
                         <button type="submit"><i class="fa fa-search"></i></button>    
                          <br></br>
                         <table> 
-                         
                           <tr class="head">
                           <td><font size = "2">  Id</font> </td>
                                 <td><font size = "2">  Número de documento</font> </td>
@@ -233,7 +230,7 @@
                             <td>Marco Vinicio</td>
                             <td>Vaca Torres</td>
                             <td>Av. 24 de Mayo y Santa Lucia</td>
-                            <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                            <td><a class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-edicom" role="tab" aria-controls="edicom">Editar</a>
                               <a id="eli6" href="#" class="btn btn-outline-cancelar2" onclick=" return eliminar6()">Eliminar</a></td>
                           </tr>
                        
@@ -258,7 +255,6 @@
                                   <td><font size = "2">  Descripción</font> </td>		
                                   <td><font size = "2">  Precio</font> </td>		
                             <td colspan="2" >Acción  </td>
-                            
                             </tr>
                             <tr id="septimo">
                               <td>1</td>
@@ -267,7 +263,7 @@
                                 • arroz <br>
                                 • gaseosa familiar</td>
                               <td>19.50</td>
-                              <td><a href=""  class="boton_agregar btn btn-outline-dark">Editar</a>
+                              <td><a  class="boton_agregar btn btn-outline-dark" data-toggle="list" href="#list-edipro" role="tab" aria-controls="edipro">Editar</a>
                                 <a id="eli7" href="#" class="btn btn-outline-cancelar2" onclick=" return eliminar7()">Eliminar</a></td>
                             </tr>
                         
@@ -403,6 +399,218 @@
                             </div>
                         </form>
                   </div>
+
+                  <div class="tab-pane fade" id="list-edip" role="tabpanel" aria-labelledby="list-edip-list">
+                    <h6>Editar plato</h6>
+                    <form name="formp" method="" action="index.html" onsubmit="return validar(this)">
+                      <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="n_plato">Nombre del plato:</label>
+                            <input type="text" class="form-control" value="Desayuno Continental" minlegth="3" maxlength="30" required pattern="[A-Za-z0-9\sáéíóú.,]{3,30}" title="Letras Mínimo: 3. Caracteres Especiales: No" id="n_plato">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="des_plato">Descripción:</label>
+                            <input type="text" class="form-control" value="Café, té, capuchino o chocolate caliente" minlegth="8" maxlength="350" required pattern="[A-Za-z0-9\sáéíóú.,]{8,350}" title="Letras Mínimo: 8. Caracteres Especiales: No" id="des_plato">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="tipo_plato">Tipo:</label>
+                            <select class="form-control" id="selectp" required>
+                              <option selected="true" value="desa">Desayuno</option>
+                              <option value="almu">Almuerzo</option>
+                              <option value="postr">Postre</option>
+                              <option value="bebi">Bebida</option>
+                              <option value="ensa">Ensalada</option>
+                              <option value="piz">Pizza</option>
+                              <option value="pol">Pollo</option>
+                              <option value="car">Carne</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="pre">Precio:</label>
+                            <input type="text" class="form-control" value="10.20" minlegth="1" maxlength="6" required pattern="[0-9,.]{1,6}" title="Letras : No permitidas." id="pre">
+                        </div>
+                      </div>
+                          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <button class="btn btn-outline-success" type="submit">Guardar cambios</button>
+                            </div>
+                            <div>
+                                <a class="btn btn-outline-cancelar" href="index.html">
+                                    Cancelar
+                                </a>
+                            </div>
+                          </div>
+                      </form>
+                </div>
+
+                <div class="tab-pane fade" id="list-ediped" role="tabpanel" aria-labelledby="list-ediped-list">
+                  <h6>Editar pedido</h6>
+                  <form name="formp" method="" action="index.html" onsubmit="return validar(this)">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="f_nacimiento">Fecha del pedido:</label>
+                        <input type="date" class="form-control" name="fechanac" value="1990-10-11"  id="f_nacimiento" readonly="readonly">
+                    </div>
+                      <div class="form-group col-md-6">
+                          <label for="nombres">Nombres:</label>
+                          <input type="text" class="form-control " value="Marco Vaca"  id="nombres" readonly="readonly">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="cedulap">Cédula:</label>
+                          <input type="text" class="form-control" value="1727667220" id="cedulap" readonly="readonly" >
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="direccion5">Dirección:</label>
+                          <input type="text" class="form-control" id="direccion5" value="Av. 24 de Mayo y Santa Lucia" minlegth="3" maxlength="30" required pattern="[A-Za-z0-9\sáéíóú.]{3,30}" title="Letras Mínimo: 3. Caracteres Especiales: No" >
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="celular">Total a pagar:</label>
+                          <input type="text" class="form-control" value="20.40" minlegth="1" maxlength="6" required pattern="[0-9,.]{1,6}" title="Letras : No permitidas." id="celular">
+                      </div>
+                    </div><br><br>
+                    <hr class="altura">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                          <div class="btn-group mr-2" role="group" aria-label="First group">
+                              <button class="btn btn-outline-success" type="submit">Guardar cambios</button>
+                          </div>
+                          <div>
+                              <a class="btn btn-outline-cancelar" href="index.html">
+                                  Cancelar
+                              </a>
+                          </div>
+                        </div>
+                    </form>
+              </div>
+
+              <div class="tab-pane fade" id="list-edicli" role="tabpanel" aria-labelledby="list-edicli-list">
+                <h6>Editar cliente</h6>
+                <form name="formp" method="" action="index.html" onsubmit="return validar(this)">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" class="form-control " value="Marco Vinicio" minlegth="3" maxlength="20" required pattern="[A-Za-z\sáéíóúÁÉÍÓÚ]{3,20}" title="Letras Mínimo: 3. Números: No permitidos" id="nombres">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" class="form-control" value="Vaca Torres" minlegth="3" maxlength="20" required pattern="[A-Za-z\sáéíóúÁÉÍÓÚ]{3,20}" title="Letras Mínimo: 3. Números: No permitidos" id="apellidos">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cedula">Cédula:</label>
+                        <input type="text" class="form-control" value="1727667220" id="cedula" readonly="readonly" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="correo">Correo:</label>
+                        <input type="email"  class="form-control" value="marco_v@gmial.com" id="correo" readonly="readonly">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="celular">Celular:</label>
+                        <input type="tel" class="form-control" value="0982869377" minlegth="7" maxlength="10" required pattern="[0-9]{7,10}" title="Letras : No. Cantidad Números Máximo: 10" id="celular">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="f_nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" class="form-control" name="fechanac" value="1990-10-11"  id="f_nacimiento" readonly="readonly">
+                    </div>
+                  </div><br><br>
+                  <hr class="altura">
+                      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button class="btn btn-outline-success" type="submit">Guardar cambios</button>
+                        </div>
+                        <div>
+                            <a class="btn btn-outline-cancelar" href="index.html">
+                                Cancelar
+                            </a>
+                        </div>
+                      </div>
+                  </form>
+            </div>
+
+            <div class="tab-pane fade" id="list-edicom" role="tabpanel" aria-labelledby="list-edicom-list">
+              <h6>Editar Comrobante</h6>
+              <form name="formp" method="" action="index.html" onsubmit="return validar(this)">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="cedulap">Cédula:</label>
+                    <input type="text" class="form-control" value="1727667220" id="cedulap" readonly="readonly" >
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="nombres">Nombres:</label>
+                  <input type="text" class="form-control " value="Marco Vinicio" minlegth="3" maxlength="20" required pattern="[A-Za-z\sáéíóúÁÉÍÓÚ]{3,20}" title="Letras Mínimo: 3. Números: No permitidos" id="nombres">
+              </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="apellidos">Apellidos:</label>
+                  <input type="text" class="form-control" value="Vaca Torres" minlegth="3" maxlength="20" required pattern="[A-Za-z\sáéíóúÁÉÍÓÚ]{3,20}" title="Letras Mínimo: 3. Números: No permitidos" id="apellidos">
+              </div>
+                  <div class="form-group col-md-6">
+                      <label for="direccion5">Dirección:</label>
+                      <input type="text" class="form-control" id="direccion5" value="Av. 24 de Mayo y Santa Lucia" minlegth="3" maxlength="30" required pattern="[A-Za-z0-9\sáéíóú.]{3,30}" title="Letras Mínimo: 3. Caracteres Especiales: No" >
+                    </div>
+                </div>
+               <br><br>
+                <hr class="altura">
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group mr-2" role="group" aria-label="First group">
+                          <button class="btn btn-outline-success" type="submit">Guardar cambios</button>
+                      </div>
+                      <div>
+                          <a class="btn btn-outline-cancelar" href="index.html">
+                              Cancelar
+                          </a>
+                      </div>
+                    </div>
+                </form>
+          </div>
+
+          <div class="tab-pane fade" id="list-edipro" role="tabpanel" aria-labelledby="list-edipro-list">
+            <h6>Editar Promoción</h6>
+            <form name="formpr" method="" action="index.html" onsubmit="return validar(this)">
+              <div class="form-row">
+                <div class="form-group col-sm-12">
+                    <label for="n_plato">Nombre de promoción:</label>
+                    <input type="text" class="form-control" value="Combo Familiar de Pollo"  minlegth="3" maxlength="30" required pattern="[A-Za-z0-9\sáéíóú.,]{3,30}" title="Letras Mínimo: 3. Caracteres Especiales: No" id="n_plato">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-sm-12">
+                    <label for="des_plato">Descripción:</label>
+                    <input type="text" class="form-control" value="Pollo con papas fritas o cocidas, arroz y gaseosa familiar " minlegth="8" maxlength="350" required pattern="[A-Za-z0-9\sáéíóú.,]{8,350}" title="Letras Mínimo: 3. Caracteres Especiales: No" id="des_plato">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-sm-12">
+                    <label for="pre">Precio:</label>
+                    <input type="text" class="form-control" value="19.50" minlegth="1" maxlength="6" required pattern="[0-9,.]{1,6}" title="Letras : No permitidas." id="pre">
+                </div>
+              </div>
+                  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button class="btn btn-outline-success" type="submit">Guardar</button>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline-cancelar" href="index.html">
+                            Cancelar
+                        </a>
+                    </div>
+                  </div>
+              </form>
+        </div>
+
             </div>
             </div>
                 </div>
