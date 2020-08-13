@@ -202,3 +202,53 @@ function eliminarf(){
 else {alert("Datos de factura no eliminada");
 }   
 };
+
+function buscarplato(f){
+  var ok = true;
+  //var ejem=document.getElementById('txtusuario');
+  var ejem=f.elements[0].value;
+  ejem = ejem.toUpperCase();
+  var msg = "Debes escribir contenido en los campos:\n";
+ // alert('Ingrese un equipo'   + ejem);
+  if(ejem != "DESAYUNO CONTINENTAL" && ejem != "DESAYUNO FRUTERO"){
+    alert("Plato no encontrado")
+    ok = false;
+  }
+  else{
+    alert("Plato encontrado")
+    ok = true;
+  }
+  return ok;
+};
+function buscarcedula(f){
+  var ok = true;
+  //var ejem=document.getElementById('txtusuario');
+  var ejem=f.elements[0].value;
+  var msg = "Debes escribir contenido en los campos:\n";
+ // alert('Ingrese un equipo'   + ejem);
+  if(ejem != "1727667220" ){
+    alert("No se encontro ningún dato")
+    ok = false;
+  }
+  else{
+    alert("Dato encontrado")
+    ok = true;
+  }
+  return ok;
+};
+function buscarpromo(f){
+  var ok = true;
+  //var ejem=document.getElementById('txtusuario');
+  var ejem=f.elements[0].value;
+  ejem = ejem.toUpperCase();
+ // alert('Ingrese un equipo'   + ejem);
+  if(ejem != "COMBO FAMILIAR DE POLLO"){
+    alert("Promoción no encontrada")
+    ok = false;
+  }
+  else{
+    alert("Promoción encontrada")
+    ok = true;
+  }
+  return ok;
+};

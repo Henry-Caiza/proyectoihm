@@ -88,7 +88,7 @@
                 </div>
                 <div class="tab-pane fade" id="list-platos" role="tabpanel" aria-labelledby="list-platos-list">
                   <h6 class="text-left">Platos</h6><br><hr class="altura"></hr>
-                  <form class="example">
+                  <form class="example" name= "busplato" action="javascript:myFunction(); return false;" onsubmit="return buscarplato(this)">
                     <input type="text" class="form-buscar" placeholder="Buscar por nombre del plato" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                     <a class="btn btn-info-2" data-toggle="list" href="#list-ing" role="tab" aria-controls="ing">
@@ -134,7 +134,7 @@
               </div>
                 <div class="tab-pane fade" id="list-pedidos" role="tabpanel" aria-labelledby="list-pedidos-list">
                   <h6 class="text-left">Pedidos</h6><br><hr class="altura"></hr>
-                  <form class="example">
+                  <form class="example" name= "buspe" action="javascript:myFunction(); return false;" onsubmit="return buscarcedula(this)">
                     <input type="text" class="form-buscar" placeholder="Buscar por cédula de cliente" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                      <br></br>
@@ -175,7 +175,7 @@
                   </div>
                   <div class="tab-pane fade" id="list-clientes" role="tabpanel" aria-labelledby="list-clientes-list">
                     <h6 class="text-left">Clientes</h6><br><hr class="altura"></hr>
-                    <form class="example">
+                    <form class="example" name= "buscli" action="javascript:myFunction(); return false;" onsubmit="return buscarcedula(this)">
                       <input type="text" class="form-buscar" placeholder="Buscar por cédula de cliente" name="search">
                       <button type="submit"><i class="fa fa-search"></i></button>
                       <a class="btn btn-info-2" data-toggle="list" href="#list-cli" role="tab" aria-controls="cli">
@@ -210,7 +210,7 @@
                     </div>
                     <div class="tab-pane fade" id="list-comprobantes" role="tabpanel" aria-labelledby="list-comprobantes-list">
                       <h6 class="text-left">Comprobantes</h6><br><hr class="altura"></hr>
-                      <form class="example">
+                      <form class="example" name= "buscli" action="javascript:myFunction(); return false;" onsubmit="return buscarcedula(this)">
                         <input type="text" class="form-buscar" placeholder="Buscar por cédula de cliente" name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>    
                          <br></br>
@@ -240,7 +240,7 @@
                       </div>
                       <div class="tab-pane fade" id="list-promociones" role="tabpanel" aria-labelledby="list-promociones-list">
                         <h6 class="text-left">Promociones</h6><br><hr class="altura"></hr>
-                        <form class="example">
+                        <form class="example" name= "busprom" action="javascript:myFunction(); return false;" onsubmit="return buscarpromo(this)">
                           <input type="text" class="form-buscar" placeholder="Buscar por nombre de promoción" name="search">
                           <button type="submit"><i class="fa fa-search"></i></button>
                           <a class="btn btn-info-2" data-toggle="list" href="#list-prom" role="tab" aria-controls="prom">
