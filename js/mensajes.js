@@ -13,8 +13,7 @@ function validar(f) {
     {
       ok = false;
     }
-   
-   
+  
     if(ok == true && confirm('¿Desea guardar los datos?') == true){
     alert('Datos guardados');
     }
@@ -23,6 +22,31 @@ function validar(f) {
 	}
     return ok;
 };
+
+function validar_reg(f) {
+  var ok = true;
+  if(f.elements[0].value == "")
+  {
+    ok = false;
+  }
+  if(f.elements[1].value == "")
+  {
+    ok = false;
+  }
+  if(f.elements[2].value == "")
+  {
+    ok = false;
+  }
+
+  if(ok == true && confirm('¿Desea seguri con su registro?') == true){
+  alert('¡Registro exitoso!');
+  }
+else {alert("Datos no guardados");
+  ok = false;
+}
+  return ok;
+};
+
 
 function guardar() {
     confirm("¿Desea guardar los datos?");
